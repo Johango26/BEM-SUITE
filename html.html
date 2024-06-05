@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .header {
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box; 
+        }
+
+        .header__logo {
+            height: 20px; 
+            margin-right: 10px; 
+        }
+
+        .header__center {
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu__item {
+            margin-right: 20px;
+        }
+
+        .menu__link {
+            color: black;
+            font-size: 18px;
+        }
+
+        .footer {
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer__logo {
+            height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+            grid-template-rows: repeat(3, 1fr); /* 3 filas */
+            width: 90%; 
+            margin: 0 auto; /* Centrar la cuadrícula */
+        }
+
+        .grid-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 10px; /* Añadir espacio entre las imágenes */
+        }
+
+        .grid-item__img {
+            max-width: 100%; /* Ajustar el tamaño máximo de la imagen */
+            height: auto;
+        }
+
+        .grid-item--3-9 {
+            grid-column: 3 / span 1;
+            grid-row: 1 / span 2;
+        }
+
+        .grid-item--5-6-11-12 {
+            grid-column: 5 / span 2;
+            grid-row: 1 / span 2;
+        }
+
+        .grid-item--13-14-19-20 {
+            grid-column: 3 / span 2;
+            grid-row: 3 / span 2;
+        }
+
+        .grid-item--17-23 {
+            grid-column: 5 / span 1;
+            grid-row: 3 / span 2;
+        }
+
+        .grid-item--25-26 {
+            grid-column: 1 / span 2;
+            grid-row: 5 / span 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container">
+            <header class="header">
+                <div>
+                    <img class="header__logo" src="img\Logo-dark.png" alt="Logo">
+                    <div class="header__center">
+                    </div>
+                </div>
+                <ul class="menu">
+                    <li class="menu__item"><a class="menu__link" href="#">Main</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+                </ul>
+            </header>
+            <div class="grid-container">
+                <!-- Añade aquí tus elementos de la cuadrícula -->
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-1.jpg" alt="Imagen 1"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-2.jpg" alt="Imagen 2"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-3.jpg" alt="Imagen 3"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-4.jpg" alt="Imagen 4"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-5-1.jpg" alt="Imagen 5"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-6.jpg" alt="Imagen 6"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-8.jpg" alt="Imagen 7"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-9.jpg" alt="Imagen 8"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-10.jpg" alt="Imagen 9"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-11.jpg" alt="Imagen 10"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-12.jpg" alt="Imagen 11"></div>
+                <div class="grid-item"><img class="grid-item__img" src="img_segundo\print-port-13.jpg" alt="Imagen 12"></div>
+                <!-- Añade aquí más elementos -->
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <img class="footer__logo" src="img\Footer-logo.png" alt="Imagen de pie de página">
+        <p class="footer__text">Texto debajo de la imagen</p>
+    </footer>
+</body>
+</html>
